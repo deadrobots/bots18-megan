@@ -8,7 +8,7 @@ def drive(leftspeed, rightspeed, time):
     ao()
 
 def main():
-    print "Hi there I'm Waiting for you to push the button"
+    print "Hi there I am Waiting for you to push the button"
     # we are going to see if picking up the can still works after rebuilding robot"
     wait_for_button()
     enable_servos()
