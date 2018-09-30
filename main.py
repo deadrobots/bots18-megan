@@ -9,7 +9,7 @@ def drive(leftspeed, rightspeed, time):
 
 def main():
     print "Hi there I am Waiting for you to push the button"
-    # we are going to see if picking up the can still works after rebuilding robot"
+    # add tophat"
     wait_for_button()
     enable_servos()
     set_servo_position(1,1775)
@@ -25,6 +25,14 @@ def main():
         dist=analog(etPort)
         print dist
     ao()
+    # thport
+    if analog(thport)>1500
+        #on  black
+    motor(0,50)
+    motor(1,100)
+    else #on white
+    motor(0,100)
+    motor(1,50)
     wait_for_button()
     set_servo_position(1, 750)
     msleep (1000)
