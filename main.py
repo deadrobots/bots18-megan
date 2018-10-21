@@ -30,24 +30,30 @@ def dropcan():
     set_servo_position(armservo, 890)
     msleep(1000)
 
+def wait_for_button():
+    print "press left button"
+    while not left_button():
+        pass
+
 def main():
-    print "Hi there I am Waiting for you to push the button"
+    print "Hello there I am Waiting for you to push the button"
     # add tophat"
     wait_for_button()
     enable_servos()
 
     drive(100, 100, 100)
-
+    #follow line until It  gets close to the can
+    dist = analog(etPort)
     while(dist<2600):
         dist=analog(etPort)
-        print dist
+        print analog(thport)
+        if analog(thport) > 400:  # on  black
+            drive(100, 5, 1)
+        else:  # on white
+            drive(5, 100, 1)
     ao()
     # thport
-    if analog(thport)>1500: #on  black
-        drive(100, 50, 10)
 
-    else: #on white
-        drive(50, 100, 10)
     wait_for_button()
 
     for x in range(0, 4):
@@ -60,10 +66,7 @@ def main():
     ao()
     msleep(1000)
 
-def wait_for_button():
-    print "press left button"
-    while not left_button():
-        pass
+
 
 
 
