@@ -11,6 +11,18 @@ dist = 0
 armservo = 0
 clawservo = 1
 
+# Great work so far, Megan!
+# Next up, let's put your constants and motor functions in different files. Try using the following structure:
+# constants.py (holds your constants!)
+# actions.py  (contains collections of motor and servo commands to perform an action. EX: grabCan() )
+# servo.py (just holds servo related functions. Not motor commands, generally)
+# motors.py (just holds your motor commands. drive(), driveTimed(), driveUntilBlackLine(), stuff like that.)
+# main.py (where everything starts!)
+# I think I'm looking at old code, because I remember working with you on your line follow/can detection
+# Don't forget to commit (AND PUSH!) your code before you leave the cave. I'll try to do a better job of 
+# reminding people before they leave. Next time I'll have more specific comments for you 
+# -LMB
+
 def drive(leftspeed, rightspeed, time):
     motor(lm, leftspeed)
     motor(rm, rightspeed)
