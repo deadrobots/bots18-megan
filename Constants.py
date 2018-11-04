@@ -6,7 +6,7 @@ etPort = 0   #ET distance
 
 #Servo Ports
 armservo = 0 #Arm
-clawservo = 1  #Claw
+clawservo = 2  #Claw
 
 
 #Motor Ports
